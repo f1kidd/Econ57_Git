@@ -1,8 +1,4 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
+
 # Syllabus
 Econ 57a, Environmental Economics, Fall 2021  
 Lecture: Tuesday / Thursday 10:00-11:30 pm Eastern Standard Time (GMT -4)    

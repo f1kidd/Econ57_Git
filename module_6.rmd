@@ -1,14 +1,6 @@
----
-output:
-  html_document: default
-  ioslides_presentation: default
----
 
-title: 'Module 6: Measuring Benefits'
-output:
-  slidy_presentation: default
-  beamer_presentation: default
-  ioslides_presentation: default
+## Econ 57a, Environmental Economics, Fall 2021	
+### Module 6: Measuring Benefits   
 
 
 ## Mid-term Grade Distribution

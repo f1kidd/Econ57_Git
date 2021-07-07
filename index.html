@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Econ 57a - Environmental Economics</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a></a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<div id="syllabus" class="section level1">
+<h1>Syllabus</h1>
+<p>Econ 57a, Environmental Economics, Fall 2021<br />
+Lecture: Tuesday / Thursday 10:00-11:30 pm Eastern Standard Time (GMT -4)<br />
+Location: TBD</p>
+<p><strong>This is a tentative version of the syllabus, and is subject to change without prior notification.</strong></p>
+<p>Instructor: Prof. Xinde “James” Ji<br />
+Email: <a href="mailto:xji@brandeis.edu" class="email">xji@brandeis.edu</a><br />
+Office Hours: Wednesday 2:00 - 4:00 pm, or by appointment</p>
+<p><em>Disclaimer: Email is the preferred communication mechanism, and I promise to respond to your email within 24 hours (48 hours on weekends). Using alternative communication media (instant messaging) does not guarantee a faster response.</em></p>
+<p>Teaching Assistant: Ruoxi “Kathy” Zhang<br />
+Email: <a href="mailto:ruoxizhang@brandeis.edu" class="email">ruoxizhang@brandeis.edu</a><br />
+Office Hours: TBD<br />
+Location: TBD</p>
+<p>Course materials will be posted on LATTE, as well as on my personal website, <a href="https://sites.google.com/site/xindejamesji/teaching/environmental-economics" class="uri">https://sites.google.com/site/xindejamesji/teaching/environmental-economics</a></p>
+<div id="teaching-modes" class="section level2">
+<h2>Teaching Modes</h2>
+<p>This class is taught <strong>in person</strong>. Attendance will not be tracked and you are not required to inform the instructor when you will miss a class. Please find out (either from the instructor or another student in the class) what you missed and get the relevant notes.</p>
+</div>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>How much is an endangered species worth? Are we going to run out of fuel in the next 50 years? How damaging is climate change, and how should we deal with it? Why are so many fisheries over-exploited, forests cut down, aquifers depleted, and are there ways to prevent that?</p>
+<p>Human society is intrinsically connected with nature. This course aims to provide an introduction to the economics regarding natural resources and the environment. In first part of the course, we will talk about how economists think about environmental and resource problems from methodological and analytical perspectives. Topics include market failures and policy instruments to correct them, property rights, and ways to evaluate benefits and costs of protecting the environment. In the second part of the course, we will dive into specific real-world environmental problems and analyze them using economic methods and tools. Topics will include non-renewable resources, air, water, climate, and others.</p>
+</div>
+<div id="learning-goals" class="section level2">
+<h2>Learning goals</h2>
+<p>There are four learning goals that I hope you will be able to grasp by the end of this course.</p>
+<ol style="list-style-type: decimal">
+<li>Know the facts (not the alternative facts or the rhetoric)
+<ul>
+<li>How damaging will climate change be on our society?</li>
+<li>How many jobs will be lost by phasing out fossil fuel in the next 10 years?</li>
+</ul></li>
+<li>Know the concepts of which economists think of environmental problem
+<ul>
+<li>What is the Coase theorem?</li>
+<li>What is scarcity rent?</li>
+</ul></li>
+<li>Develop skills to think logically, critically, and coherently
+<ul>
+<li>Graphically show how to correct externalities using the instrument of taxation</li>
+<li>Apply the equi-marginal principle to the case of freshwater allocation</li>
+</ul></li>
+<li>Develop an economic mindset that can be applied to analyze real-world environmental problems
+<ul>
+<li>What are the trade-offs associated with protecting wildlife in Madagascar?</li>
+<li>What is the best way to do so?</li>
+</ul></li>
+</ol>
+</div>
+<div id="prerequisites" class="section level2">
+<h2>Prerequisites</h2>
+<p>Students are expected to have knowledge of microeconomics at the level of Econ 2a (A Survey of Economics) or Econ 10a (Intro to Microeconomics). I will assume that you have basic knowledge regarding supply and demand, consumer and producer surplus, opportunity cost, etc. Please come to see me if you are not sure you meet the prerequisites of the course.</p>
+</div>
+<div id="textbook" class="section level2">
+<h2>Textbook</h2>
+<p><strong>Required</strong><br />
+<code>Markets and the Environment (2nd Edition), by Nathaniel Keohane and Sheila Olmstead, Island Press (2016)</code><br />
+The textbook is available for purchase at the Brandeis Bookstore.</p>
+<p><strong>Optional</strong><br />
+<code>Environmental and Natural Resource Economics (11th Edition), by Tom Tietenberg and Lynne Lewis, Prentice Hall (2018)</code><br />
+<code>Economics and the Environment (7th Edition), by Eban Goodstein and Stephen Polasky, Wiley (2013)</code></p>
+<p><strong>Readings</strong><br />
+Additional readings will be posted on LATTE.</p>
+</div>
+<div id="grading" class="section level2">
+<h2>Grading</h2>
+<ol style="list-style-type: decimal">
+<li>Thoughts and Questions (10%)<br />
+A collection of readings will be assigned for each module. Please read them and reflect on the following question, unless otherwise specified:<br />
+<code>What did you find most challenging, confusing, or noteworthy about the reading?</code>
+<ul>
+<li>You get 1 point for each TQ you submit as long as it is a good-faith effort.</li>
+<li>Each TQ is due by 10 pm on the day before we start a new module.</li>
+<li>I will drop the lowest two TQ scores.</li>
+</ul></li>
+<li>Class Debate (20%)
+<ul>
+<li>See instruction below</li>
+</ul></li>
+<li>Problem Sets (20%)
+<ul>
+<li>There will be ~6 assignments throughout the semester.</li>
+<li>Problems will be posted on Tuesday, and are due on the next Tuesday before class (10 am). I accept late assignments, though it reduces your grade by 10% each day.</li>
+<li>All the assignments are individual unless otherwise stated.</li>
+</ul></li>
+<li>Midterm Exam (25%)
+<ul>
+<li>Time TBD</li>
+<li>Open book, open notes</li>
+</ul></li>
+<li>Final Exam (25%)
+<ul>
+<li>Time TBD</li>
+<li>Open book, open notes</li>
+<li>The exam will focus on the second half of the class, though you are expected to be able to apply concepts and tools covered in the first half of the class.</li>
+</ul></li>
+</ol>
+</div>
+<div id="instructions-on-classroom-debate" class="section level2">
+<h2>Instructions on Classroom Debate</h2>
+<p>You are expected to form a debate team of 3-4 students. There will be 4-5 debates throughout the semester, and you will be asked to choose one of the debate topics. Your stance on the question will be randomly drawn, one week before the debate.</p>
+<p>I will be moderating the debate, and the rest of the class will serve as the judge. The team that convince more people to change their stance wins the debate. The winning team will be rewarded by two extra points. In addition, the best debater (who may not necessarily come from the winning team) will get two extra points.</p>
+<p>Here is a list of debate topics:</p>
+<ul>
+<li>Overpopulation is in conflict with the goal to develop sustainably.<br />
+</li>
+<li>Nuclear energy should power our future.<br />
+</li>
+<li>The Green New Deal is a policy that the United States should implement.<br />
+</li>
+<li>Developing nations should be given the opportunity to develop their economy first before cleaning up the environment.<br />
+</li>
+<li>We should make every effort to track and conserve our daily water use here in Waltham, MA.</li>
+</ul>
+</div>
+<div id="class-policies" class="section level2">
+<h2>Class Policies</h2>
+<div id="attendance" class="section level4">
+<h4>Attendance</h4>
+<p>While participation in synchronous sessions is encouraged, there are no attendance requirements for this class.</p>
+</div>
+<div id="academic-honesty" class="section level4">
+<h4>Academic Honesty</h4>
+<p>Every member of the University community is expected to maintain the highest standards of academic integrity. A student shall not submit work that is falsified or is not the result of the student’s own effort. Infringement of academic honesty by a student subjects that student to serious penalties, which may include failure on the assignment, failure in the course, suspension from the University or other sanctions (see section 20 of Brandeis University Rights and Responsibilities). Please consult Brandeis University Rights and Responsibilities (see <a href="https://www.brandeis.edu/studentlife/srcs/rightsresponsibilities/index.html" class="uri">https://www.brandeis.edu/studentlife/srcs/rightsresponsibilities/index.html</a>) for all policies and procedures related to academic integrity. Students may be required to submit work to TurnItIn.com software to verify originality. A student who is in course or assignment should consult the faculty member responsible for that course or assignment before submitting the work. Allegations of alleged academic dishonestry will be forwarded to the Department of Student Rights and Community Standards. Citation and research assistance can be found at Brandeis Library Guides - Citing Sources (<a href="https://guides.library.brandeis.edu/c.php?g=301723" class="uri">https://guides.library.brandeis.edu/c.php?g=301723</a>).</p>
+</div>
+<div id="accommodations" class="section level4">
+<h4>Accommodations</h4>
+<p>Brandeis seeks to welcome and include all students. If you are a student who needs accommodations as outlined in an accommodations letter, please reach out me and present your letter of accommodation as soon as you can. I want to support you.</p>
+<p>In order to provide test accommodations, I need the letter more than 48 hours in advance. I want to provide your accommodations, but cannot do so retroactively. If you have questions about documenting a disability or requesting accommodations, please contact Student Accessibility Support (SAS) at 781.736.3470 or <a href="mailto:access@brandeis.edu" class="email">access@brandeis.edu</a>.</p>
+</div>
+</div>
+<div id="course-outline" class="section level2">
+<h2>Course Outline</h2>
+<p><em>Note: the course outline is alive and breathing, so it may evolve spontaneously as the course goes along.</em></p>
+<ol style="list-style-type: decimal">
+<li>Why Environmental Economics?
+<ul>
+<li>Why Adam Smith is not entirely correct</li>
+<li>The need for environmental economics</li>
+<li>The current state of business<br />
+<code>Readings: Fullerton and Stavins (1998); Boyle and Kotchen (2018); McCarthy (2019)</code></li>
+</ul></li>
+<li>The Efficiency Standard
+<ul>
+<li>The demand</li>
+<li>The supply</li>
+<li>The equi-marginal principle<br />
+<code>Readings: Keohane and Olmstead Chapter 2 (pp 11-30); Do you think like an economist (LA Times)</code></li>
+</ul></li>
+<li>When Do Markets Fail
+<ul>
+<li>Externality</li>
+<li>Property rights</li>
+<li>The open-access problem</li>
+<li>The public good problem<br />
+<code>Readings: Keohane and Olmstead Chapter 5; Hardin(1968)</code></li>
+</ul></li>
+<li>How to Correct Market Failures
+<ul>
+<li>Command and control regulation</li>
+<li>Pigovian taxes</li>
+<li>Subsidies</li>
+<li>Coase theorem, cap and trade</li>
+<li>Policy instruments under uncertainty</li>
+<li>Ostrom, common-pool resources<br />
+<code>Readings: Keohane and Olmstead Chapter 8; Ronald Coase and the Misuse of Economics (New Yorker); Ostrom(2009)'s Nobel Prize Press Release</code></li>
+</ul></li>
+<li>Command-and-Control vs. Market-based Policy
+<ul>
+<li>Cost-effectiveness</li>
+<li>Innovation</li>
+<li>The US Sulfur Trading Scheme</li>
+<li>Do we ever prefer command-and-control?<br />
+<code>Readings: Keohane and Olmstead Chapter pp 168-184; Keohane and Olmstead pp 200-207; The Invisible Green Hand (The Economist)</code></li>
+</ul></li>
+<li>Measuring Benefits
+<ul>
+<li>Estimating causal effects</li>
+<li>Estimating dollar values</li>
+<li>stated preference</li>
+<li>revealed preference<br />
+<code>Readings: Goodstein and Polasky Chapter 5; EPA Plans to Revisit a Touchy Topic (New York Times)</code><br />
+<strong>—-Midterm about here—-</strong><br />
+</li>
+</ul></li>
+<li>Measuring Costs
+<ul>
+<li>Engineering vs. opportunity cost</li>
+<li>Measuring social welfare losses</li>
+<li>Who bears the cost?</li>
+<li>Employment</li>
+<li>Innovation<br />
+<code>Readings: Keohane and Olmstead pp. 35-40, 43-44; Give me green, and jobs, but not green jobs (the Economist); Why Green Energy Can't Power a Job Engine (NYTimes)</code><br />
+</li>
+</ul></li>
+<li>Benefit-cost Analysis and Dynamic Efficiency
+<ul>
+<li>Criteria for evaluating programs</li>
+<li>Discounting and present value</li>
+<li>Dynamic decision-making</li>
+<li>Decision under uncertainty<br />
+<code>Readings: Keohane and Olmstead pp. 55-62; Goodstein and Polasky pp 146-150; Cunningham (2009)</code></li>
+</ul></li>
+<li>Non-renewable Resources
+<ul>
+<li>The two-period problem</li>
+<li>The infinite horizon problem</li>
+<li>Hotelling’s rule</li>
+<li>The Simon-Erhlich bet<br />
+<code>Readings: Tietenberg and Lewis pp 107-116; Betting on the Planet (NYTimes)</code></li>
+</ul></li>
+<li>Water
+<ul>
+<li>Who owns the water?</li>
+<li>The economics of water resources</li>
+<li>Water transfers</li>
+<li>When will we run out of water <code>Readings: Tietenberg and Lewis pp 197-207; West's Drought and Growth Intensify Conflict Over Water Rights (NYTimes)</code></li>
+</ul></li>
+<li>Climate Change
+<ul>
+<li>The economic consequence of climate change</li>
+<li>Measuring benefits and costs</li>
+<li>Policy instruments: tax, cap, and the clean power plan</li>
+<li>Global agreements</li>
+</ul></li>
+<li>The Environment and Economic Development
+<ul>
+<li>Development and the environment</li>
+<li>The Kuznets Hypothesis</li>
+<li>Environmental governance and politics in the developing world</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

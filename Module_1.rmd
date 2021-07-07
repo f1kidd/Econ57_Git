@@ -1,12 +1,13 @@
 ---
 output:
-  html_document: default
+  slidy_presentation: default
   ioslides_presentation: default
   pdf_document: default
+  html_document: default
 ---
 
 
-## Econ 57a, Environmental Economics, Fall 2019	
+## Econ 57a, Environmental Economics, Fall 2021	
 ### Module 1: Introduction   
 * Environmental problems are challenging   
 * Economics can help   
