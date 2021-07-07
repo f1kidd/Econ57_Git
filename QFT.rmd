@@ -1,0 +1,85 @@
+---
+title: 'QFT: the question formulation exercise'
+output:
+  beamer_presentation: default
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+
+
+## Econ 57a, Environmental Economics, Fall 2019 
+### QFT: the question formulation exercise
+
+
+## 
+Please sit with your group members for now
+
+## Take two minutes
+
+Give your group an awesome name!!
+
+## The Question Formulation Exercise
+* To help you develop and refine questions for your group project
+* To help you think through the various aspects of the project
+
+## Four rules for QFT
+1. Ask as many questions as you can
+2. Do not stop to discuss, judge, or answer the questions
+3. Write down every question exactly as it is stated
+4. Change any statement into a question
+
+## Which of the above four rules is the hardest to follow?
+
+
+## The prompt
+* Pick a topic phrase for your group project if you have not already done so. 
+* This can be:
+    - The Green New Deal
+    - Solar Energy
+    - Water Safety
+* Write down the "prompt" on your sheet
+
+## The Question
+Take five minutes, and put down your list of questions on the sheet
+
+## Choose three questions that you find to be the most interesting
+Label them yellow and put a star in column A
+
+## Type of Questions
+A question can be open-ended or close-ended
+
+* Close-ended question
+    - How much extra death does climate change cause to the Commonwealth of Massachusetts each year?
+    - Rigorous scientific hypothesis testing
+* Open-ended question
+    - What is the economic/societal impact of climate change to the Commonwealth of Massachusetts?
+
+## Label your question as close-ended or open-ended
+
+## 
+A question can also be positive or normative:
+
+* Positive questions: finding facts
+    - How much extra death does climate change cause to the Commonwealth of Massachusetts each year?
+    - What is the economic/societal impact of climate change to the Commonwealth of Massachusetts?
+* Normative questions: finding alternatives
+    - Is moving vulnerable population out the BEST strategy for them to adapt to climate change?
+    - What is the best strategy to prepare vulnerable population for the upcoming climate challenge?
+
+## Label your question as positive or normative
+
+## Take one of the questions, and try to improve the original statement
+Put it underneath your list of questions.
+
+## Towards the next steps
+* What type of property right governs the good/service of your interest?
+* Who are the stakeholders
+* What are the trade-offs that are involved with your question?
+
+
+
+
+
+
+

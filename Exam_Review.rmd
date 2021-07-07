@@ -1,0 +1,144 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+  slidy_presentation: default
+---
+
+
+
+
+## Module 6: Measuring Benefits
+  
+## 
+* "Non-market valuation": to back out WTP
+* WTP is a welfare measure (Total Benefits)
+* Alternative measure: WTA
+* WTP < WTA (income effects, behavioral abnormalies, etc.)
+
+## 
+* Total Value = use value + option value + non-use value
+* Method to evaluate benefits: 
+    - stated preference methods
+    - Revealed preference methods
+  
+## 
+* Stated preference
+    - Measures all three types of values, but suffer from potential biases
+    - Contingent valuation
+    - Choice experiments
+* Revealed preference
+    - Only measures use value, but are more accurate
+    - Hedonic property price model 
+    - Hedonic wage model (VSL)
+
+## VSL 
+* The economic value of risk taken by one individual, not actual human life
+* Should be decided by each individual, not by the govt
+* VSL = wage differential / risk (1)
+*	Total WTP = VSL * risk * No. people affected (2)
+
+## Hedonic property method
+* Measures environmental benefits through housing markets
+* Total WTP = price diff * No houses affected (3)
+
+## Module 7: Measuring Costs
+
+## 
+*	Engineering costs vs. opportunity costs
+*	Env regulation is not a job killer
+    -	Job loss mainly due to automation/globalization
+*	Green jobs are not equal to net jobs
+    -	Need to calculate the opportunity cost of investment
+  
+##   
+*	Pollution haven hypothesis
+    -	Firms move to places with lax regulation
+    -	Mixed evidence
+
+
+## Module 8: Benefit Cost Analysis
+
+##
+*	Benefit-cost analysis provides a normative criteria to evaluate public policy decisions
+    - Normative
+    - Public policy
+    - Decisions
+* Decision rule: B - C > 0 (4)  
+
+## 
+* Inter-temporal decisions making:
+    - Decision rule: PVNB > 0 (5)
+    -	Discounting
+
+## 
+The discounting equation:
+
+$$PV = \frac{CV}{(1+r)^t}$$   
+
+PV of an infinite stream of payoff = $\frac{\text{CV of each year's payoff}}{r}$
+
+##
+* Larger discount rate: values the current more
+*	How is discount rate determined:
+    - Ramsey equation: discount rate = time preference + weighted growth rate
+    -	Public discount rate < private discount rate
+*	Decision making under uncertainty
+    - Compare E(PVNB)
+
+
+
+## Module 9: Non-renewable Resources
+
+## 
+* Difference between "economic scarcity" and "physical scarcity"
+    - R/P does not capture the economy-wide feedbacks
+* Higher market price induces:
+    - New discoveries
+    - Development of new technologies
+    - Development of substitutes
+* Why price of a resource does not increase over time?
+
+## Solving the two-period problem
+* DEA rule: PVMNB should be equal between two periods (8)
+    - The simultaneous equation
+* Solution: Price = scarcity rent + MC (9)
+
+## Solving the N-period problem
+*	Hotelling’s rule: royalty increases at the rate of r
+
+$$SR_t = SR_0 * (1+r)^t$$ (10)
+
+*	Backstop prices for the substitute
+
+## Other implications
+*	Larger r, faster extraction, faster price increase
+*	Larger reserve, lower prices + more extraction
+*	Sustainability rule: weak, strong and environmental	
+*	Hartwick’s rule
+    - DEA could align with the weak sustainability goal
+
+
+## Module 10: Water
+
+## 
+* Consumptive vs. non-consumptive use
+* Water rights in the US:
+    - Riparian rights
+    - Prior appropriation rights
+  
+##  
+*	Efficient allocation of water
+    -	MB for water is equalized for all users
+    - Be able to apply this rule to determine who gets (how much) water
+*	Problems with PA doctrine
+    - Not an efficient/fair allocation
+    - High transaction cost prohibits water trades
+
+
+
+
+
+
+
+
