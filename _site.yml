@@ -1,7 +1,10 @@
 name: "Econ 57a - Environmental Economics"
+output_dir: "docs"
+exclude: ["*.pdf"]
 navbar:
   title: "Econ 57a - Environmental Economics"
   left:
+    menu:
     - text: "Module 1"
       href: Module_1.html
     - text: "Module 2"
