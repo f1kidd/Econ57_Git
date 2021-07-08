@@ -1,91 +1,307 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title>module_6.utf8</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link href="site_libs/slidy-2/styles/slidy.css" rel="stylesheet" />
-  <script src="site_libs/slidy-2/scripts/slidy.js"></script>
-  <script src="site_libs/slidy_shiny-1/slidy_shiny.js"></script>
-</head>
-<body>
-<div class="slide section level2">
+<!DOCTYPE html>
 
-<p>title: ‘Module 6: Measuring Benefits’ output: slidy_presentation: default beamer_presentation: default ioslides_presentation: default</p>
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>module_6.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Econ 57a Environmental Economics</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a></a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
 </div>
-<div id="mid-term-grade-distribution" class="slide section level2">
-<h1>Mid-term Grade Distribution</h1>
+
+
+<div id="econ-57a-environmental-economics-fall-2021" class="section level2">
+<h2>Econ 57a, Environmental Economics, Fall 2021</h2>
+<div id="module-6-measuring-benefits" class="section level3">
+<h3>Module 6: Measuring Benefits</h3>
+</div>
+</div>
+<div id="mid-term-grade-distribution" class="section level2">
+<h2>Mid-term Grade Distribution</h2>
 <p><img src="figures/score_distribution.png" height="450" /></p>
 </div>
-<div id="section" class="slide section level2">
-<h1></h1>
+<div id="section" class="section level2">
+<h2></h2>
 <p>So far in this class we have talked about:</p>
 <ul>
 <li>Environmental and resources problems arise from market failures
@@ -102,8 +318,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="section-1" class="slide section level2">
-<h1></h1>
+<div id="section-1" class="section level2">
+<h2></h2>
 <p>In this module, we are going to look into ways to measure environmental benefits. We will talk about:</p>
 <ul>
 <li>Why putting a dollar tag on the environment?</li>
@@ -117,14 +333,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The value of a (statistical) life</li>
 </ul>
 </div>
-<div id="should-we-as-a-society-put-a-dollar-tag-on-the-environment-at-all" class="slide section level2">
-<h1>Should we (as a society) put a dollar tag on the environment at all?</h1>
+<div id="should-we-as-a-society-put-a-dollar-tag-on-the-environment-at-all" class="section level2">
+<h2>Should we (as a society) put a dollar tag on the environment at all?</h2>
 <ul>
 <li>Are we selling off the environment?</li>
 </ul>
 </div>
-<div id="section-2" class="slide section level2">
-<h1></h1>
+<div id="section-2" class="section level2">
+<h2></h2>
 <ul>
 <li>Societal values are mostly human-centric
 <ul>
@@ -142,8 +358,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="benefit-cost-analysis" class="slide section level2">
-<h1>Benefit-cost Analysis</h1>
+<div id="benefit-cost-analysis" class="section level2">
+<h2>Benefit-cost Analysis</h2>
 <ul>
 <li>Most laws and rules require benefit-cost analysis since the Reagan administration:
 <ul>
@@ -155,8 +371,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Putting dollar numbers on environmental benefits satisfy that requirement</li>
 </ul>
 </div>
-<div id="damage-curve-marginal-benefit-from-environment" class="slide section level2">
-<h1>Damage curve (marginal benefit from environment)</h1>
+<div id="damage-curve-marginal-benefit-from-environment" class="section level2">
+<h2>Damage curve (marginal benefit from environment)</h2>
 <ul>
 <li>Everyone loves the environment, but to what extent?</li>
 <li>Helps guiding policy-design
@@ -167,8 +383,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="why-environmental-benefits-are-hard-to-measure" class="slide section level2">
-<h1>Why environmental benefits are hard to measure?</h1>
+<div id="why-environmental-benefits-are-hard-to-measure" class="section level2">
+<h2>Why environmental benefits are hard to measure?</h2>
 <ul>
 <li>Markets are the best way to measure benefits (and costs)
 <ul>
@@ -185,8 +401,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This requires <strong>non-market valuation</strong> techniques</li>
 </ul>
 </div>
-<div id="willingness-to-pay" class="slide section level2">
-<h1>“Willingness to pay”</h1>
+<div id="willingness-to-pay" class="section level2">
+<h2>“Willingness to pay”</h2>
 <ul>
 <li>The amount of wealth a consumer is willing to sacrifice for the good
 <ul>
@@ -200,8 +416,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="wtp-vs.-wta" class="slide section level2">
-<h1>WTP vs. WTA</h1>
+<div id="wtp-vs.-wta" class="section level2">
+<h2>WTP vs. WTA</h2>
 <ul>
 <li>WTP is not the only way to measure consumer surplus</li>
 <li>Willingness to accept: amount of compensation in exchange of losing something</li>
@@ -212,8 +428,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="section-3" class="slide section level2">
-<h1></h1>
+<div id="section-3" class="section level2">
+<h2></h2>
 <p>Though in reality, WTA &gt;&gt; WTP</p>
 <ul>
 <li>Income effect: by accepting compensation the individual gets a bit richer</li>
@@ -224,31 +440,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </div>
-<div id="recall-the-first-class" class="slide section level2">
-<h1>Recall the first class:</h1>
+<div id="recall-the-first-class" class="section level2">
+<h2>Recall the first class:</h2>
 <ul>
 <li><p>You are approached by a representative from a big pharmaceutical company who invites you to participate in a test trial of a new drug. She informs you that there is a 1 in 10,000 chance that the drug may have serious side effects that can lead to your death. What is your WTA?</p></li>
 <li><p>You recently completed a DNA test, which reveals that you are susceptible to a certain type of virus. The doctor informs you that about 1 in 10,000 people in the population will have the chance to be contacted, and die from this virus. She also informs you that there has been a vaccine developed for this virus that will make you immune from it for your lifetime. What is your WTP?</p></li>
 </ul>
 </div>
-<div id="empirical-distribution-of-the-class" class="slide section level2">
-<h1>Empirical Distribution of the Class</h1>
+<div id="empirical-distribution-of-the-class" class="section level2">
+<h2>Empirical Distribution of the Class</h2>
 <p>Mean WTA: $39 Billion<br />
 Median WTA: $100 Million</p>
 <p>Mean WTP: $6.4 Billion<br />
 Median WTP: $1000</p>
 </div>
-<div id="section-4" class="slide section level2">
-<h1></h1>
+<div id="section-4" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_wtp_plot.png" height="230" /></p>
 <p><img src="figures/m6_wta_plot.png" height="230" /></p>
 </div>
-<div id="prospect-theory-value-function" class="slide section level2">
-<h1>Prospect theory: value function</h1>
+<div id="prospect-theory-value-function" class="section level2">
+<h2>Prospect theory: value function</h2>
 <p><img src="figures/m6_loss_aversion.png" height="450" /></p>
 </div>
-<div id="risk-assessment-and-perception" class="slide section level2">
-<h1>Risk Assessment and Perception</h1>
+<div id="risk-assessment-and-perception" class="section level2">
+<h2>Risk Assessment and Perception</h2>
 <p>The first step towards assessing environmental values is to understand what risks are involved</p>
 <ul>
 <li>Mortality risks</li>
@@ -256,8 +472,8 @@ Median WTP: $1000</p>
 <li>Risks of tail weather events: hurricanes, drought, etc.</li>
 </ul>
 </div>
-<div id="take-a-guess-of-the-following-mortality-risk" class="slide section level2">
-<h1>Take a guess of the following mortality risk:</h1>
+<div id="take-a-guess-of-the-following-mortality-risk" class="section level2">
+<h2>Take a guess of the following mortality risk:</h2>
 <ul>
 <li>Death from Airplane Crash</li>
 <li>Death by Mass shooting in the US</li>
@@ -291,8 +507,8 @@ Median WTP: $1000</p>
 </tbody>
 </table>
 </div>
-<div id="section-5" class="slide section level2">
-<h1></h1>
+<div id="section-5" class="section level2">
+<h2></h2>
 <table>
 <thead>
 <tr class="header">
@@ -336,20 +552,20 @@ Median WTP: $1000</p>
 </tbody>
 </table>
 </div>
-<div id="misperception-of-risk" class="slide section level2">
-<h1>(Mis)perception of risk</h1>
+<div id="misperception-of-risk" class="section level2">
+<h2>(Mis)perception of risk</h2>
 <ul>
 <li>Public distrust of expert / science</li>
 <li>Lack of knowledge</li>
 <li>Bias against small probabilities</li>
 </ul>
 </div>
-<div id="prospect-theory-again" class="slide section level2">
-<h1>Prospect theory, again</h1>
+<div id="prospect-theory-again" class="section level2">
+<h2>Prospect theory, again</h2>
 <p><img src="figures/m6_prospect_probability.png" height="450" /></p>
 </div>
-<div id="also-not-all-risks-should-be-treated-equally" class="slide section level2">
-<h1>Also, not all risks should be treated equally</h1>
+<div id="also-not-all-risks-should-be-treated-equally" class="section level2">
+<h2>Also, not all risks should be treated equally</h2>
 <ul>
 <li>The government tend to less regulate when it involves individual’s choice
 <ul>
@@ -363,15 +579,15 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="valuing-statistical-live" class="slide section level2">
-<h1>Valuing “statistical” live</h1>
+<div id="valuing-statistical-live" class="section level2">
+<h2>Valuing “statistical” live</h2>
 <ul>
 <li>What are you even talking about? Of course life is priceless</li>
 <li>Any attempt to put a price on human life is immoral itself</li>
 </ul>
 </div>
-<div id="and-of-course-there-are-contentions-around-that-very-idea" class="slide section level2">
-<h1>And of course, there are contentions around that very idea</h1>
+<div id="and-of-course-there-are-contentions-around-that-very-idea" class="section level2">
+<h2>And of course, there are contentions around that very idea</h2>
 <ul>
 <li>EPA reduced its <strong>Value of Statistical Life (VSL)</strong> in decision-making
 <ul>
@@ -383,8 +599,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="but-saving-lives-also-entail-tradeoffs" class="slide section level2">
-<h1>But saving lives also entail tradeoffs</h1>
+<div id="but-saving-lives-also-entail-tradeoffs" class="section level2">
+<h2>But saving lives also entail tradeoffs</h2>
 <ul>
 <li>Reducing risk for one group could mean increasing risk for another</li>
 <li>Public resources are limited:
@@ -397,8 +613,8 @@ Median WTP: $1000</p>
 <li>Decisions have to be made, one way or the other</li>
 </ul>
 </div>
-<div id="questions" class="slide section level2">
-<h1>Questions</h1>
+<div id="questions" class="section level2">
+<h2>Questions</h2>
 <ul>
 <li>Are we really talking about the “economic value of a life”? Or is it something else?</li>
 <li>Who gets to say how much a “statistical life” is worth?
@@ -409,8 +625,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="lets-pause-for-a-second-and-go-back-to-70-years-ago" class="slide section level2">
-<h1>Let’s pause for a second and go back to 70 years ago</h1>
+<div id="lets-pause-for-a-second-and-go-back-to-70-years-ago" class="section level2">
+<h2>Let’s pause for a second and go back to 70 years ago</h2>
 <ul>
 <li>Year 1949, WWII ended just four years earlier</li>
 <li>Cold war just started, US rivaled with USSR (Soviet Union)</li>
@@ -422,8 +638,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="section-6" class="slide section level2">
-<h1></h1>
+<div id="section-6" class="section level2">
+<h2></h2>
 <ul>
 <li>RAND presented their plan at the USAF, and got bombarded
 <ul>
@@ -432,16 +648,16 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="the-criterion-problem" class="slide section level2">
-<h1>The criterion problem</h1>
+<div id="the-criterion-problem" class="section level2">
+<h2>The criterion problem</h2>
 <ul>
 <li>RAND started to put actual weights on airplane crews in its objective functions</li>
 <li>This fundamentally becomes an economics problem: casualty is part of the “cost”</li>
 <li>And the key to this problem is to factor in casualty in a profit maximization problem</li>
 </ul>
 </div>
-<div id="armen-alchian-1951" class="slide section level2">
-<h1>Armen Alchian (1951)</h1>
+<div id="armen-alchian-1951" class="section level2">
+<h2>Armen Alchian (1951)</h2>
 <ul>
 <li>Humans have intrinsic values above the investment they represent, and cannot be directly represented by any dollar figure
 <ul>
@@ -451,8 +667,8 @@ Median WTP: $1000</p>
 <li>Therefore, there is some “exchange ratio” between human lives and dollars, appropriate in our context</li>
 </ul>
 </div>
-<div id="the-exchange-ratio" class="slide section level2">
-<h1>The “exchange ratio”</h1>
+<div id="the-exchange-ratio" class="section level2">
+<h2>The “exchange ratio”</h2>
 <p>Alchian went on and wrote:</p>
 <ul>
 <li>But we (as economists) will be very brave to attempt to predic what this exchange ratio should be</li>
@@ -460,8 +676,8 @@ Median WTP: $1000</p>
 <li>This ratio should be selected very early in the analysis, in order to solve the problem</li>
 </ul>
 </div>
-<div id="popular-approaches-at-that-time" class="slide section level2">
-<h1>Popular approaches at that time</h1>
+<div id="popular-approaches-at-that-time" class="section level2">
+<h2>Popular approaches at that time</h2>
 <ul>
 <li>The replacement cost approach
 <ul>
@@ -474,40 +690,40 @@ Median WTP: $1000</p>
 </ul>
 <p>What are the problems with the above two approaches?</p>
 </div>
-<div id="thomas-schelling-comes-in" class="slide section level2">
-<h1>Thomas Schelling comes in</h1>
+<div id="thomas-schelling-comes-in" class="section level2">
+<h2>Thomas Schelling comes in</h2>
 <ul>
 <li>Berkeley BA, Harvard PhD in 1951</li>
 <li>Vesting fellow at RAND in 1958</li>
 <li>With his student Jack Carlson, a former Air Force pilot, Schelling start to look at the problem more rigorously</li>
 </ul>
 </div>
-<div id="section-7" class="slide section level2">
-<h1></h1>
+<div id="section-7" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_schelling.jpg" height="450" /></p>
 </div>
-<div id="a-problem-of-trade-offs" class="slide section level2">
-<h1>A problem of trade-offs</h1>
+<div id="a-problem-of-trade-offs" class="section level2">
+<h2>A problem of trade-offs</h2>
 <ul>
 <li>Saving lives entails actual and opportunity costs</li>
 <li>By evaluating choices upon those trade-offs, we can infer the value of a life</li>
 <li>USAF was already making these types of choices between costs and lives</li>
 </ul>
 </div>
-<div id="capsule-ejection-system-for-a-b-58-bomber" class="slide section level2">
-<h1>Capsule ejection system for a B-58 bomber</h1>
+<div id="capsule-ejection-system-for-a-b-58-bomber" class="section level2">
+<h2>Capsule ejection system for a B-58 bomber</h2>
 <ul>
 <li>USAF designed and installed an emergency ejection system for B-58 bomber, costs $80 million</li>
 <li>It would save 1-3 lives annually</li>
 <li>Implied that the “money valuation of pilot’s lives” were at least $1.2-9.0 million</li>
 </ul>
 </div>
-<div id="section-8" class="slide section level2">
-<h1></h1>
+<div id="section-8" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_B58.jpg" height="450" /></p>
 </div>
-<div id="but-who-should-have-a-say-on-the-exchange-ratio" class="slide section level2">
-<h1>But who should have a say on the “exchange ratio”?</h1>
+<div id="but-who-should-have-a-say-on-the-exchange-ratio" class="section level2">
+<h2>But who should have a say on the “exchange ratio”?</h2>
 <ul>
 <li>USAF (or other public agencies) cares about the <em>aggregate</em> number of fatalities
 <ul>
@@ -517,8 +733,8 @@ Median WTP: $1000</p>
 <li>Carlson (1963): An USAF pilot took up a <em>risk</em> of dying of 2.32 per 10,000 annually, for some $2280 of increased pay</li>
 </ul>
 </div>
-<div id="is-it-life-or-is-it-risk" class="slide section level2">
-<h1>Is it life? Or is it risk?</h1>
+<div id="is-it-life-or-is-it-risk" class="section level2">
+<h2>Is it life? Or is it risk?</h2>
 <ul>
 <li>From an individual’s perspective, this is NOT a choice between <strong>life</strong> and cost
 <ul>
@@ -535,8 +751,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="and-who-should-have-the-say" class="slide section level2">
-<h1>And who should have the say?</h1>
+<div id="and-who-should-have-the-say" class="section level2">
+<h2>And who should have the say?</h2>
 <p>Schelling (1968) writes:</p>
 <ul>
 <li>We figure out the value of a good through a market</li>
@@ -549,8 +765,8 @@ Median WTP: $1000</p>
 <li>People whose lives may be saved SHOULD have something to say about the value</li>
 </ul>
 </div>
-<div id="consumers-sovereignty-should-reign" class="slide section level2">
-<h1>Consumers’ sovereignty should reign</h1>
+<div id="consumers-sovereignty-should-reign" class="section level2">
+<h2>Consumers’ sovereignty should reign</h2>
 <ul>
 <li>It is every one of our choices that counts, not the preference of public officials</li>
 <li>It is the economists’ job to figure out how much people values risk
@@ -560,8 +776,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="value-of-a-statistical-life" class="slide section level2">
-<h1>“Value of a Statistical Life”</h1>
+<div id="value-of-a-statistical-life" class="section level2">
+<h2>“Value of a Statistical Life”</h2>
 <ul>
 <li>How much individuals value mortality risks</li>
 </ul>
@@ -572,15 +788,15 @@ Median WTP: $1000</p>
 <p><strong>Total Benefits = VSL * Expected Lives Saved</strong></p>
 <p>where Expected Lives Saved = Mortality Risk * Number of People Impacted</p>
 </div>
-<div id="how-do-economists-get-vsl" class="slide section level2">
-<h1>How do economists get VSL?</h1>
+<div id="how-do-economists-get-vsl" class="section level2">
+<h2>How do economists get VSL?</h2>
 <ul>
 <li>Contingent valuation</li>
 <li>Hedonic methods</li>
 </ul>
 </div>
-<div id="compensating-wage-differentials" class="slide section level2">
-<h1>Compensating wage differentials</h1>
+<div id="compensating-wage-differentials" class="section level2">
+<h2>Compensating wage differentials</h2>
 <ul>
 <li>Working in the mining industry has an annual risk of 24.5 per 100,000 workers.</li>
 <li>On average miners earn $2,000 more than a worker in the service sector, who has an annual risk of 1.5 per 100,000 workers</li>
@@ -588,47 +804,47 @@ Median WTP: $1000</p>
 </ul>
 <p><strong>VSL = <span class="math inline">\(\Delta\)</span>Wage / <span class="math inline">\(\Delta\)</span>Mortality Risk</strong></p>
 <p>In math, we have:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="dv">2000</span> <span class="op">/</span><span class="st"> </span>(<span class="fl">24.5</span><span class="op">/</span><span class="dv">100000</span><span class="fl">-1.5</span><span class="op">/</span><span class="dv">100000</span>)</a></code></pre></div>
+<pre class="r"><code>2000 / (24.5/100000-1.5/100000)</code></pre>
 <pre><code>## [1] 8695652</code></pre>
 </div>
-<div id="some-empirical-evidence" class="slide section level2">
-<h1>Some empirical evidence</h1>
+<div id="some-empirical-evidence" class="section level2">
+<h2>Some empirical evidence</h2>
 <p><img src="figures/m6_occupational_risk.png" height="400" /></p>
 </div>
-<div id="section-9" class="slide section level2">
-<h1></h1>
+<div id="section-9" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_mvsl.png" height="450" /></p>
 </div>
-<div id="kahneman-and-tversky-1979" class="slide section level2">
-<h1>Kahneman and Tversky (1979)</h1>
+<div id="kahneman-and-tversky-1979" class="section level2">
+<h2>Kahneman and Tversky (1979)</h2>
 <p>You are forced to play the Russian roulette with a mafia boss, and the boss give you a chance to remove one bullet from the pistol roulette. Which of the following scenario will you be willing to pay more:</p>
 <ol style="list-style-type: decimal">
 <li>Reduction from 4 bullets to 3</li>
 <li>Reduction from 1 bullet to 0</li>
 </ol>
 </div>
-<div id="section-10" class="slide section level2">
-<h1></h1>
+<div id="section-10" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_russian_roulette.jpg" height="450" /></p>
 </div>
-<div id="section-11" class="slide section level2">
-<h1></h1>
+<div id="section-11" class="section level2">
+<h2></h2>
 <p><img src="figures/m7_age_vsl.png" height="450" /></p>
 </div>
-<div id="the-remaining-problem" class="slide section level2">
-<h1>The remaining problem</h1>
+<div id="the-remaining-problem" class="section level2">
+<h2>The remaining problem</h2>
 <p>Should the VSL be different across different populations?</p>
 </div>
-<div id="tqs-from-you" class="slide section level2">
-<h1>TQs from you</h1>
+<div id="tqs-from-you" class="section level2">
+<h2>TQs from you</h2>
 <ul>
 <li><p>“Although the numbers being lower for older people may sound harsh, from an economic perspective it totally makes sense (because seniors are willing to pay less for risk reduction than prime-age citizens).”</p></li>
 <li><p>“However, what these readings fail to consider is that environmental problems disproportionately affect poorer and marginalized populations…We must do something about how our environmental policy decisions do not reflect the wellbeing and voices of marginalized populations”</p></li>
 <li><p>“Are the upper class willing to pay more in avoidance of fatal risks than the lower class, so that VSL tends to be higher as people become wealthier? If so, will this further support critiques of VSL to argue that lives of the poor worth less than those of the rich…?”</p></li>
 </ul>
 </div>
-<div id="types-of-environmental-values" class="slide section level2">
-<h1>Types of Environmental Values</h1>
+<div id="types-of-environmental-values" class="section level2">
+<h2>Types of Environmental Values</h2>
 <ul>
 <li>Use Value
 <ul>
@@ -644,15 +860,15 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="section-12" class="slide section level2">
-<h1></h1>
+<div id="section-12" class="section level2">
+<h2></h2>
 <ul>
 <li>Total Willingness to Pay</li>
 </ul>
 <p>Total WTP = Use Value + Option Value + Nonuse Value</p>
 </div>
-<div id="classifying-valuation-methods" class="slide section level2">
-<h1>Classifying Valuation Methods</h1>
+<div id="classifying-valuation-methods" class="section level2">
+<h2>Classifying Valuation Methods</h2>
 <ul>
 <li>Stated preference method
 <ul>
@@ -664,8 +880,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="state-preference-method" class="slide section level2">
-<h1>State preference method</h1>
+<div id="state-preference-method" class="section level2">
+<h2>State preference method</h2>
 <ul>
 <li>Let people “state” their preference in hypothetical scenarios</li>
 <li>Is able to measure almost anything:
@@ -680,8 +896,8 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="contingent-valuation-method" class="slide section level2">
-<h1>Contingent Valuation Method</h1>
+<div id="contingent-valuation-method" class="section level2">
+<h2>Contingent Valuation Method</h2>
 <ul>
 <li>It is to elicit people’s willingness-to-pay (WTP) in a hypothetical market</li>
 <li>A NOAA panel (1993) legitimized the use of contingent valuation</li>
@@ -693,20 +909,20 @@ Median WTP: $1000</p>
 </ul></li>
 </ul>
 </div>
-<div id="choice-experiments" class="slide section level2">
-<h1>Choice Experiments</h1>
+<div id="choice-experiments" class="section level2">
+<h2>Choice Experiments</h2>
 <ul>
 <li>Respondents are asked to choose among alternate bundles of goods</li>
 <li>Each bundle has a set of attributes and the levels of each attribute vary across bundles</li>
 <li>WTP identified through choice differences</li>
 </ul>
 </div>
-<div id="section-13" class="slide section level2">
-<h1></h1>
+<div id="section-13" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_ce_chocolate.png" height="450" /></p>
 </div>
-<div id="section-14" class="slide section level2">
-<h1></h1>
+<div id="section-14" class="section level2">
+<h2></h2>
 <ul>
 <li>State preference methods potentially suffer from potential biases
 <ul>
@@ -719,20 +935,20 @@ Median WTP: $1000</p>
 <li>Requires high-quality survey design</li>
 </ul>
 </div>
-<div id="section-15" class="slide section level2">
-<h1></h1>
+<div id="section-15" class="section level2">
+<h2></h2>
 <p>A deadly virus has hit your city, and there are 600 people infected by that virus facing life threats. You are presented with the following two procedures to help them:</p>
 <p>A. Save 200 people for sure.<br />
 B. 33% chance of saving 600 people, 66% chance of saving no one.</p>
 </div>
-<div id="section-16" class="slide section level2">
-<h1></h1>
+<div id="section-16" class="section level2">
+<h2></h2>
 <p>A deadly virus has hit your city, and there are 600 people infected by that virus facing life threats. You are presented with the following two procedures to help them:</p>
 <p>A. 400 people will die for sure.<br />
 B. 33% chance that no people will die, 66% chance that all 600 people will die.</p>
 </div>
-<div id="revealed-preference-method" class="slide section level2">
-<h1>Revealed preference method</h1>
+<div id="revealed-preference-method" class="section level2">
+<h2>Revealed preference method</h2>
 <ul>
 <li>Let people reveal their preference through actual choices</li>
 <li>Application limited mostly to “use values”
@@ -743,8 +959,8 @@ B. 33% chance that no people will die, 66% chance that all 600 people will die.<
 </ul></li>
 </ul>
 </div>
-<div id="hedonic-method" class="slide section level2">
-<h1>Hedonic method</h1>
+<div id="hedonic-method" class="section level2">
+<h2>Hedonic method</h2>
 <ul>
 <li>Hedonism: “pleasure”, advocated by Epicurus, the Greek philosopher</li>
 <li>Infer the “implicit” price of a non-market good through price differences of commodities traded on the market
@@ -754,8 +970,8 @@ B. 33% chance that no people will die, 66% chance that all 600 people will die.<
 </ul></li>
 </ul>
 </div>
-<div id="hedonic-property-value-method" class="slide section level2">
-<h1>Hedonic property value method</h1>
+<div id="hedonic-property-value-method" class="section level2">
+<h2>Hedonic property value method</h2>
 <ul>
 <li>Home property prices are determined by a bundle of attributes
 <ul>
@@ -771,12 +987,12 @@ B. 33% chance that no people will die, 66% chance that all 600 people will die.<
 <li>All these attributes will factor into the price of that property</li>
 </ul>
 </div>
-<div id="section-17" class="slide section level2">
-<h1></h1>
+<div id="section-17" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_waltham_house.png" height="450" /></p>
 </div>
-<div id="implicit-price-for-educational-opportunity" class="slide section level2">
-<h1>Implicit price for educational opportunity</h1>
+<div id="implicit-price-for-educational-opportunity" class="section level2">
+<h2>Implicit price for educational opportunity</h2>
 <ul>
 <li>Take two identical houses across the street, everything else is the same: square footage, bedrooms, school districts, etc.</li>
 <li>The only difference is:
@@ -792,12 +1008,12 @@ B. 33% chance that no people will die, 66% chance that all 600 people will die.<
 </ul></li>
 </ul>
 </div>
-<div id="school-district-boundary-in-melrose-ma" class="slide section level2">
-<h1>School district boundary in Melrose, MA</h1>
+<div id="school-district-boundary-in-melrose-ma" class="section level2">
+<h2>School district boundary in Melrose, MA</h2>
 <p><img src="figures/m6_school_district.png" height="450" /></p>
 </div>
-<div id="guess-how-much-was-this-apartment-in-beijing-sold-for" class="slide section level2">
-<h1>Guess how much was this apartment in Beijing sold for:</h1>
+<div id="guess-how-much-was-this-apartment-in-beijing-sold-for" class="section level2">
+<h2>Guess how much was this apartment in Beijing sold for:</h2>
 <ul>
 <li>118 sqft (11 m3)</li>
 <li>No bathroom, no kitchen</li>
@@ -805,24 +1021,24 @@ B. 33% chance that no people will die, 66% chance that all 600 people will die.<
 <li>School district of the “Beijing Second Experimental Primary School”, one of the best primary schools in Beijing</li>
 </ul>
 </div>
-<div id="section-18" class="slide section level2">
-<h1></h1>
+<div id="section-18" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_beijing_laopoxiao.jpg" height="450" /></p>
 </div>
-<div id="section-19" class="slide section level2">
-<h1></h1>
+<div id="section-19" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_beijing_laopoxiao2.jpg" height="450" /></p>
 </div>
-<div id="take-a-guess" class="slide section level2">
-<h1>Take a guess</h1>
+<div id="take-a-guess" class="section level2">
+<h2>Take a guess</h2>
 <p>A. $10,000<br />
 B. $50,000<br />
 C. $100,000<br />
 D. $300,000<br />
 E. $1,000,000</p>
 </div>
-<div id="implicit-price-of-industrial-pollution" class="slide section level2">
-<h1>Implicit price of industrial pollution</h1>
+<div id="implicit-price-of-industrial-pollution" class="section level2">
+<h2>Implicit price of industrial pollution</h2>
 <ul>
 <li>Pete and his husband live quietly in a small town in the suburb of South Bend</li>
 <li>One day, the mayor announced that a coal-fired power plant is moving into the town, polluting local air</li>
@@ -834,8 +1050,8 @@ E. $1,000,000</p>
 <li>Only affecting houses within a 1-mile radius</li>
 </ul>
 </div>
-<div id="hedonic-property-value" class="slide section level2">
-<h1>Hedonic property value</h1>
+<div id="hedonic-property-value" class="section level2">
+<h2>Hedonic property value</h2>
 <p>Holding everything else equal:</p>
 <ul>
 <li>WTP for environmental quality = price differences of a clean and a dirty house</li>
@@ -847,8 +1063,8 @@ E. $1,000,000</p>
 </ul></li>
 </ul>
 </div>
-<div id="takeaways-from-the-module" class="slide section level2">
-<h1>Takeaways from the module</h1>
+<div id="takeaways-from-the-module" class="section level2">
+<h2>Takeaways from the module</h2>
 <ul>
 <li>Environmental benefits include:
 <ul>
@@ -865,20 +1081,20 @@ E. $1,000,000</p>
 <li>Value of Statistical Life</li>
 </ul>
 </div>
-<div id="the-impossible-three-legged-stool" class="slide section level2">
-<h1>The impossible three-legged stool</h1>
+<div id="the-impossible-three-legged-stool" class="section level2">
+<h2>The impossible three-legged stool</h2>
 <p><img src="figures/m6_3leg_stool.png" height="400" /></p>
 </div>
-<div id="questions-1" class="slide section level2">
-<h1>Questions</h1>
+<div id="questions-1" class="section level2">
+<h2>Questions</h2>
 <ul>
 <li>What are the risks associated in this case?</li>
 <li>What are the trade-offs?</li>
 <li>Will the situation be different in another place / under a different culture?</li>
 </ul>
 </div>
-<div id="taiwans-problem" class="slide section level2">
-<h1>Taiwan’s problem</h1>
+<div id="taiwans-problem" class="section level2">
+<h2>Taiwan’s problem</h2>
 <ul>
 <li>Taiwan used to have three nuclear power plants, and are constructing a fourth (Nuclear IV)
 <ul>
@@ -896,16 +1112,16 @@ E. $1,000,000</p>
 </ul></li>
 </ul>
 </div>
-<div id="section-20" class="slide section level2">
-<h1></h1>
+<div id="section-20" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_no_nukes.jpg" height="450" /></p>
 </div>
-<div id="section-21" class="slide section level2">
-<h1></h1>
+<div id="section-21" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_tsai.jpg" height="450" /></p>
 </div>
-<div id="section-22" class="slide section level2">
-<h1></h1>
+<div id="section-22" class="section level2">
+<h2></h2>
 <ul>
 <li>Tsai, a Harvard and LSE grad, won the election in 2016</li>
 <li>Began to implement her campaign promise of nuclear-free in 2025</li>
@@ -916,8 +1132,8 @@ E. $1,000,000</p>
 </ul></li>
 </ul>
 </div>
-<div id="the-815-power-outage" class="slide section level2">
-<h1>The 8/15 power outage</h1>
+<div id="the-815-power-outage" class="section level2">
+<h2>The 8/15 power outage</h2>
 <ul>
 <li>On 8/15/2017, six generators at the Tatan power plant fully tripped</li>
 <li>With limited backup generating capacity, the entire Taipei city blacked out</li>
@@ -925,12 +1141,12 @@ E. $1,000,000</p>
 <li>Hospital reported two incidents of stopped respirators, an ongoing surgery was cancelled</li>
 </ul>
 </div>
-<div id="section-23" class="slide section level2">
-<h1></h1>
+<div id="section-23" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_taiwan_power.png" height="450" /></p>
 </div>
-<div id="it-is-not-only-the-black-out" class="slide section level2">
-<h1>It is not only the black-out</h1>
+<div id="it-is-not-only-the-black-out" class="section level2">
+<h2>It is not only the black-out</h2>
 <ul>
 <li>After the blackout, Tsai’s administration began increasing capacity for coal-fired power plant</li>
 <li>That leads to another problem: air pollution (and climate change)</li>
@@ -938,12 +1154,12 @@ E. $1,000,000</p>
 <li>DPP constituents in the Southern part were especially hurt</li>
 </ul>
 </div>
-<div id="section-24" class="slide section level2">
-<h1></h1>
+<div id="section-24" class="section level2">
+<h2></h2>
 <p><img src="figures/m6_taiwan_air_quality.jpg" height="450" /></p>
 </div>
-<div id="section-25" class="slide section level2">
-<h1></h1>
+<div id="section-25" class="section level2">
+<h2></h2>
 <ul>
 <li>The Kuomintang (KMT, conservatives) led a huge anti-pollution campaign in 2017</li>
 <li>Demanding changes in energy and environmental policy
@@ -953,16 +1169,16 @@ E. $1,000,000</p>
 </ul></li>
 </ul>
 </div>
-<div id="tsai-caved-in" class="slide section level2">
-<h1>Tsai caved in</h1>
+<div id="tsai-caved-in" class="section level2">
+<h2>Tsai caved in</h2>
 <ul>
 <li>Facing political pressure, Tsai walked back on her campaign promise</li>
 <li>A 2018 referendum successfully terminated the nuclear-free 2025 plan</li>
 <li>Nuclear IV is still on hold, but Tsai is facing increasing pressure to resume it</li>
 </ul>
 </div>
-<div id="questions-2" class="slide section level2">
-<h1>Questions</h1>
+<div id="questions-2" class="section level2">
+<h2>Questions</h2>
 <ul>
 <li>What are the risks associated in this case?</li>
 <li>What are the trade-offs?</li>
@@ -970,15 +1186,51 @@ E. $1,000,000</p>
 </ul>
 </div>
 
-  <!-- dynamically load mathjax for compatibility with self-contained -->
-  <script>
-    (function () {
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-      document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-  </script>
+<p>Copyright &copy; 2016 Skynet, Inc. All rights reserved.</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 </body>
 </html>

@@ -1,10 +1,6 @@
----
-title: 'Module 9: Are we running out of resources?'
-output:
-  slidy_presentation: default
-  beamer_presentation: default
-  ioslides_presentation: default
----
+
+## Econ 57a, Environmental Economics, Fall 2021	
+### Module 9: Module 9: Are we running out of resources?  
 
 ## 
 So far in this class we have talked about:

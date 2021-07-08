@@ -1,9 +1,5 @@
----
-output:
-  html_document: default
-  ioslides_presentation: default
-  pdf_document: default
----
+## Econ 57a, Environmental Economics, Fall 2021	
+### Module 6: Measuring Costs   
 
 ## 
 In this module, we are going to look at the cost of protecting the environment. We will talk about:

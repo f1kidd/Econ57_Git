@@ -1,10 +1,5 @@
----
-title: 'Module 8: Benefit-Cost Analysis and Dynamic Decision-Making'
-output:
-  beamer_presentation: default
-  slidy_presentation: default
-  ioslides_presentation: default
----
+## Econ 57a, Environmental Economics, Fall 2021	
+### Module 8: Module 8: Benefit-Cost Analysis and Dynamic Decision-Making  
 
 ## 
 So far in this class we have talked about:

@@ -1,8 +1,5 @@
----
-output:
-  html_document: default
-  slidy_presentation: default
----
+## Econ 57a, Environmental Economics, Fall 2019	
+### Module 10: Water for Life?  
 
 ## Group Presentation Order
 
