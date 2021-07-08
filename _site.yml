@@ -4,7 +4,6 @@ exclude: ["*.pdf"]
 navbar:
   title: "Econ 57a Environmental Economics"
   left:
-    menu:
       - text: "Home"
         href: index.html
       - text: "Module 1"
